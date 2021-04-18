@@ -1,0 +1,72 @@
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+#dateRange{
+    width: 90% !important;
+    left: 10%;
+    top: 0%;
+}
+
+.dropdown-menu{
+    background-image: linear-gradient( 108.1deg,  rgba(167,220,225,1) 11.2%, rgba(217,239,242,1) 88.9% );  
+}
+
+.btn { 
+    background-image: linear-gradient(to top, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+.btn:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+}
+
+#btn1{
+    margin: 7% 0% 2% 12%;
+    float: left;
+    border: none;   
+}
+
+#btn2{
+    margin: 7% 8% 2% 0;
+    float: right;
+    border: none; 
+}
+
+#red{
+    background-color: #FDE2E1;
+    color: #981B1C;
+}
+
+#green{
+    background-color: #DEF7EC;
+    color: #03543F;
+}
+
+#yellow{
+    background-color: #FEF3C7;
+    color: #92400F;
+}
+
+footer{
+   padding-top: 100px;
+}
+
+@media(max-width: 1024px){
+    #btn1{
+        margin: 20% 0 5% 8% ;
+        font-size: 0.5em;
+    }
+
+    #btn2{
+        margin: 20% 7% 5% 0 ;
+        font-size: 0.5em;
+    }
+}

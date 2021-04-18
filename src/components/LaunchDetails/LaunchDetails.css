@@ -1,0 +1,37 @@
+.LaunchDetails #logo{
+    width: 72px;
+    height: 72px;
+    margin-right: 20px;
+}
+
+.LaunchDetails .table tbody :first-child td{
+    border: none;
+}
+
+.LaunchDetails .modal-head{
+    display: flex;
+}
+
+.LaunchDetails .alert{
+    width: auto;
+    height: 5px;
+    border-radius: 20px;
+}
+
+.LaunchDetails .Modal{
+    left: 32%;
+    top: 10%;
+}
+
+.close{
+    position: absolute;
+    right: 1.5%;
+    top:0.5%;
+}
+
+@media (min-width: 600px) {
+    .LaunchDetails .Modal{
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+}
