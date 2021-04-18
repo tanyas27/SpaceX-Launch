@@ -22,8 +22,24 @@
     top: 15%;
 }
 
-@media(max-width: 500px){
+.mob-msg{
+    display: none;
+}
+
+
+@media(max-width: 599px){
     .App .logo{
         left: 15%;
+    }
+
+    .mob-msg{
+        position: absolute;
+        top: 45%;
+        color: teal;
+        font-style: italic;
+        font-family: cursive;
+        left: 10%;
+        display: block;
+        font-size: xx-large;
     }
 }

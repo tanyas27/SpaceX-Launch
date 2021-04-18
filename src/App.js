@@ -11,6 +11,7 @@ function App() {
       <header>
         <img src={Logo} alt="Logo" className="logo"/>
       </header>
+      <div className="mob-msg">Best Viewed in Desktop Only</div>
       <Main/>
     </div>
     </Router>

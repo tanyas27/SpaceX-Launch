@@ -19,8 +19,9 @@
 }
 
 .LaunchDetails .Modal{
-    left: 32%;
+    left: 12%;
     top: 10%;
+    width: 80%;
 }
 
 .close{

@@ -69,4 +69,14 @@ footer{
         margin: 20% 7% 5% 0 ;
         font-size: 0.5em;
     }
+
+    .dropdown-item{
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 599px) {
+    .Main{
+        display: none;
+    }
 }
