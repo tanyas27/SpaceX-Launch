@@ -26,6 +26,11 @@
     display: none;
 }
 
+@media(max-width: 1024px){
+    .App header{
+        height: 4.5%;
+    }
+}
 
 @media(max-width: 599px){
     .App .logo{
