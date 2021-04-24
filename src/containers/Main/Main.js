@@ -7,6 +7,7 @@ import DateRange from  '../../UI/DateRange/DateRange';
 import './Main.css';
 import LaunchDetails from '../../components/LaunchDetails/LaunchDetails';
 import {getParams, setParams} from '../../QueryParams';
+import LaunchesChart from '../LaunchesChart/LaunchesChart';
 
 function Main(props) {
   const [activePage, setActivePage] = useState(1);
@@ -21,6 +22,15 @@ function Main(props) {
   const [label, setLabel] = useState("All Time");
 
   const didMountRef = useRef(false);
+  
+  const resetAll = () => {
+    setActivePage(1);
+    setLaunchStatus(null);
+    setStartDate(null);
+    setEndDate(null);
+    setLabel("All Time");
+    props.history.push(``);
+  }
 
   const setTableRows = (responseData) => {
     let tempObj = null;
@@ -208,7 +218,7 @@ function Main(props) {
         </button>
         {(showDateModal) ? <DateRange closeModal={()=>setShowDateModal(!showDateModal)} dateChange={handleDateChange}/> : null}
       </div>
-      
+      <button className="btn btn-light" id="btn3" onClick={resetAll} style={{display: (launchStatus || startDate ) ? "block" : "none" }}>Clear All Filter <i className="bi bi-x-circle"></i></button>
       <div className="dropdown">
         <button className="btn btn-light dropdown-toggle" type="button" id="btn2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i className="bi bi-funnel"></i>
@@ -221,12 +231,15 @@ function Main(props) {
           <a className="dropdown-item" onClick={() => handleLaunchStatus("Failed")} href="#">Failed Launches</a>
         </div>
      </div>  
+     <div id="main-content">
       <Table loading={loading} 
         activePage={activePage}
         changePage={changePage}
       >
        {tableData}
-      </Table>      
+      </Table>
+      <LaunchesChart/>  
+      </div>    
       <footer></footer>
       {(showModal&&launchData) ? <LaunchDetails modalClosed={()=>setShowModal(!showModal)} details={launchData}/> : null}
     </div>
