@@ -15,7 +15,6 @@
 }
 
 .btn { 
-  
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -33,26 +32,28 @@
 }
 
 #btn1{
-    background-image: linear-gradient(to top, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
-    margin: 7% 0 2% 2%;
+    /* background-image: linear-gradient(to top, #9efbd381 0%, #57eaf283 48%, #45d4fb67 100%); */
+    margin: 6% 0 1% 34%;
     float: left;
     border: none;   
     font-size: small;
+    background-image: linear-gradient( 108.1deg,  rgba(167, 220, 225, 0.767) 11.2%, rgba(217, 239, 242, 0.774) 88.9% ); 
 }
 
 #btn3{
-    margin: 7% 0 2% 2%;
+    margin: 6% 0 1% 2%;
     float: left;
     border: none; 
     font-size: small;
 }
 
 #btn2{
-    background-image: linear-gradient(to top, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
-    margin: 7% 33% 2% 0;
+    /* background-image: linear-gradient(to top, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%); */
+    margin: 6% 1% 1% 0;
     float: right;
     border: none; 
     font-size: small;
+    background-image: linear-gradient( 108.1deg,  rgba(167, 220, 225, 0.767) 11.2%, rgba(217, 239, 242, 0.774) 88.9% );
 }
 
 #red{
@@ -74,6 +75,11 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+}
+.side{
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 1.2%;
 }
 
 footer{

@@ -11,15 +11,15 @@
     position: fixed;
     z-index:1;
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-    background-image: linear-gradient(to top, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
-}
+    /* background-image: linear-gradient(to top, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%); */
+    background-color: rgba(24, 28, 31, 0.8);}
 
 .App .logo{
     position: absolute;
     width: 260px;
-    height: 32px;
+    height: 38px;
     left: 40%;
-    top: 15%;
+    top: 13%;
 }
 
 .mob-msg{

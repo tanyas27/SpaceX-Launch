@@ -8,6 +8,7 @@ import './Main.css';
 import LaunchDetails from '../../components/LaunchDetails/LaunchDetails';
 import {getParams, setParams} from '../../QueryParams';
 import LaunchesChart from '../LaunchesChart/LaunchesChart';
+import Countdown from '../../UI/Countdown/Countdown';
 
 function Main(props) {
   const [activePage, setActivePage] = useState(1);
@@ -20,6 +21,10 @@ function Main(props) {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
   const [label, setLabel] = useState("All Time");
+  const [nextLaunch, setNextLaunch] = useState({
+    name: "",
+    date: ""
+  });
 
   const didMountRef = useRef(false);
   
@@ -92,6 +97,13 @@ function Main(props) {
       let url = setParams({status: launchStatus, start: startDate, end: endDate, label: label});
       props.history.push(`?${url}`);
     }
+
+    axios.get('https://api.spacexdata.com/v4/launches/next').then( res => {
+      setNextLaunch({
+        name: res.data.name,
+        date: date.format(new Date(res.data.date_utc), 'MM DD YYYY, h:mm am')
+      });
+    });
     
     switch(launchStatus){
       case "Upcoming": {
@@ -232,13 +244,20 @@ function Main(props) {
         </div>
      </div>  
      <div id="main-content">
+      <div className="side">
+        <Countdown
+          timeTillDate={nextLaunch.date}
+          timeFormat="MM DD YYYY, h:mm a"
+          name={nextLaunch.name}
+        />
+        <LaunchesChart/>  
+      </div>
       <Table loading={loading} 
         activePage={activePage}
         changePage={changePage}
       >
        {tableData}
       </Table>
-      <LaunchesChart/>  
       </div>    
       <footer></footer>
       {(showModal&&launchData) ? <LaunchDetails modalClosed={()=>setShowModal(!showModal)} details={launchData}/> : null}

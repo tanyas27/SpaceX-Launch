@@ -1,6 +1,5 @@
 body, html{
-  width: 98vw;
-  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -10,6 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://www.gannett-cdn.com/-mm-/885527418e6b47858deedfd5ea3d4f3e60e6d0e0/c=325-0-1722-786/local/-/media/2020/03/01/USATODAY/usatsports/MotleyFool-TMOT-85ee6821-be2e4caf.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body::-webkit-scrollbar {

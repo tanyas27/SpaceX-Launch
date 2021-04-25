@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import am4themes_kelly from "@amcharts/amcharts4/themes/kelly";
 import { used } from '@amcharts/amcharts4/.internal/core/utils/Utils';
 import './LaunchesChart.css';
 import axios from 'axios';
 
+am4core.useTheme(am4themes_kelly);
 am4core.useTheme(am4themes_animated);
 
 function LaunchesChart (props) {
@@ -40,18 +42,18 @@ function LaunchesChart (props) {
         var chart = am4core.create("chartdiv", am4charts.PieChart);
         chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-        chart.data = [
-            {
-                status: "Upcoming",
-                value: status.upcoming/ status.total
-            },   
-            {
-                status: "Success",
-                value: status.success/ status.total
-            },
+        chart.data = [  
             {
                 status: "Failed",
                 value: status.failed/ status.total
+            },
+            {
+                status: "Upcoming",
+                value: status.upcoming/ status.total
+            },
+            {
+                status: "Success",
+                value: status.success/ status.total
             }
         ];
         chart.radius = am4core.percent(70);
@@ -70,6 +72,8 @@ function LaunchesChart (props) {
 
         series.hiddenState.properties.startAngle = 90;
         series.hiddenState.properties.endAngle = 90;
+        series.labels.template.disabled = true;
+        series.ticks.template.disabled = true;
 
         chart.legend = new am4charts.Legend();
         

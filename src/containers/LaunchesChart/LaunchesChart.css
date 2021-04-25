@@ -1,9 +1,7 @@
 #launch-chart{
-    width: 30%;
-    margin-left: 4%;
-    margin-top: 1%;
-    height: 40%;
+    height: 33%;
     border-radius: .53rem;
+    margin-top: 5%;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -11,7 +9,7 @@
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-    background-image: linear-gradient( -108.1deg,  rgb(183, 243, 248) 11.2%, rgb(220, 243, 247) 88.9% );
+    background-color: rgba(250, 250, 250, 0.411);
 }
 
 @media(max-width: 1024px){
